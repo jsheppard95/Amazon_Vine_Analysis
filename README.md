@@ -1,6 +1,6 @@
 # Amazon_Vine_Analysis
 Google Colaboratory Notebook files for ETL pipeline of Amazon music reviews to
-PostgreSQL database and analysis of the ratio of five star reviews as it
+AWS PostgreSQL database and analysis of the ratio of five star reviews as it
 relates to participation in the Vine program. 
 
 ## Overview of the analysis
@@ -28,14 +28,14 @@ and those who are not.
 ## Results
 We first run our AWS RDS ETL Pipeline
 [`Amazon_Reviews_ETL.ipynb`](Amazon_Reviews_ETL.ipynb) to populate the four
-tables in our PostgreSQL database as shown below in the following images:
+tables in our PostgreSQL database as shown in the following images:
 - [`review_id_table`](Images/review_id_table.png)
 - [`products_table`](Images/products_table.png)
 - [`customers_table`](Images/customers_table.png)
 - [`vine_table`](Images/vine_table.png)
 
 We then continue our analysis to compare the number and ratio of 5 star
-reviews between those included in the Vine program (paid) and not (unpaid).
+reviews between those included in the Vine program (paid) and those not (unpaid).
 Before making this comparison, we filter the Vine data set to only contain
 rows with the following conditions:
 
@@ -58,8 +58,8 @@ this information to obtain the dataframe shown in
 ## Summary
 Comparing the number and ratio of 5 star reviews between those included and
 not included in the Vine program, we see there is no clear positivity bias for
-reviews in the program. However, the much larger number of non-vine reviews
-than Vine reviews (105979 versus 7) likely indicates that this conclusion is not
+reviews in the program. However, the much larger number of non-Vine reviews
+relative to Vine reviews (105979 versus 7) likely indicates that this conclusion is not
 statisically significant. To obtain a better understanding, increased vine
 review data is necessary. From here, one could formulate a two-sample T-test
 with the following hypotheses:
@@ -71,3 +71,5 @@ H_a : The mean rating (in number of stars) for Vine reviews is greater than that
       of non-Vine reviews, i.e there is positivity bias, and:
       mean_rating_vine > mean_rating_nonvine
 ```
+This would then determine if the mean rating for Vine reviews is significantly
+greater than the mean rating for non-Vine reviews.
