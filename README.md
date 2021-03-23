@@ -53,14 +53,14 @@ this information to obtain the dataframe shown in
 
 - Total Number of Vine Reviews: 7, Total Number of Non-Vine Reviews: 105979
 - Number of 5 Star Vine Reviews: 0, Number of 5 Star Non-Vine Reviews: 67580
-- Percentage of 5 Star Vine Reviews: 0.0%, Percentager of 5 Star Non-Vine Reviews: 63.76%
+- Percentage of 5 Star Vine Reviews: 0.0%, Percentage of 5 Star Non-Vine Reviews: 63.76%
 
 ## Summary
 Comparing the number and ratio of 5 star reviews between those included and
 not included in the Vine program, we see there is no clear positivity bias for
 reviews in the program (0.0% Vine 5 star review while 63.76% Non-Vine 5 star reviews).
 However, the much larger number of non-Vine reviews relative to Vine reviews
-(105979 versus 7) likely indicates that this conclusion is not statisically
+(105979 versus 7) likely indicates that this conclusion is not statistically
 significant. To obtain a better understanding, increased vine review data is necessary.
 From here, one could formulate a two-sample T-test with the following hypotheses:
 ```
