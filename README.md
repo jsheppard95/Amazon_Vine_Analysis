@@ -43,12 +43,12 @@ rows with the following conditions:
 - Majority of votes considered helpful, i.e
 `helpful_votes / total_votes >= 0.5`
 
-We then split the resulting dataframe in two, with one dataframe containing
+We then split the resulting DataFrame in two, with one DataFrame containing
 paid reviews, i.e `vine == "Y"`, and the other containing unpaid reviews, i.e
 `vine == "N"`. We then use `.groupby("star_rating").agg(count("star_rating"))`
-to obtain the count of each rating level for each dataframe, as shown in
+to obtain the count of each rating level for each DataFrame, as shown in
 [Rating Counts Summary](Images/rating_counts_summary.png). We then summarize
-this information to obtain the dataframe shown in
+this information to obtain the DataFrame shown in
 [Results](Images/vine_results_df.png). In summary, we find:
 
 - Total Number of Vine Reviews: 7, Total Number of Non-Vine Reviews: 105979
