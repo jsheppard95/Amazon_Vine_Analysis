@@ -181,5 +181,5 @@ and so these option should not be selected.
 and therefore one can simply open this notebook in Google Colaboratory and run
 all cells. This will include reading the Amazon review data set from an AWS
 S3 instance into a Spark DataFrame. Subsequent cells then include filtering
-this DataFrame and parasing the result to determine the number and percent of
+this DataFrame and parsing the result to determine the number and percent of
 five star reviews among the Vine program participants and non-participants.
